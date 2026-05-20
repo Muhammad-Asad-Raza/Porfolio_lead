@@ -1,0 +1,355 @@
+/* ── index.css: Global Design System, Figma Variables & Custom Animations ── */
+
+:root {
+  /* Colors - Light Theme (Editorial Contemporary Minimalist) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f4f4f6;
+  --text-primary: #121214;
+  --text-secondary: #5a5a64;
+  --text-muted: #888893;
+  --accent-blue: #1d5cff;
+  --accent-blue-glow: rgba(29, 92, 255, 0.12);
+  --accent-green: #10b981;
+  --accent-green-glow: rgba(16, 185, 129, 0.2);
+  --border-light: rgba(18, 18, 20, 0.06);
+  --border-medium: rgba(18, 18, 20, 0.12);
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --code-bg: rgba(245, 245, 247, 0.9);
+  --footer-bg: #18181b;
+  --footer-text: #e4e4e7;
+  --footer-muted: #a1a1aa;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: 'Fira Code', ui-monospace, monospace;
+
+  /* Transitions & Shadows */
+  --transition-premium: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark Mode Overrides */
+[data-theme='dark'] {
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #121215;
+  --bg-tertiary: #1a1a22;
+  --text-primary: #f8fafc;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent-blue: #3b82f6;
+  --accent-blue-glow: rgba(59, 130, 246, 0.18);
+  --border-light: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --card-bg: rgba(18, 18, 22, 0.7);
+  --code-bg: rgba(20, 20, 25, 0.9);
+  --footer-bg: #09090b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+}
+
+::selection {
+  background: var(--accent-blue-glow);
+  color: var(--accent-blue);
+}
+
+/* ── Custom Premium Keyframe Animations ── */
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes slow-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slow-glow {
+  0%, 100% {
+    opacity: 0.8;
+    filter: blur(40px) brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(55px) brightness(1.25);
+  }
+}
+
+/* Global utility classes */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.glass-premium {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme='dark'] .glass-premium {
+  background: rgba(18, 18, 24, 0.55);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #1d5cff 0%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grayscale Portrait Layout */
+.portrait-grayscale {
+  filter: grayscale(1) contrast(1.1) brightness(1.02);
+  transition: var(--transition-premium);
+}
+
+.portrait-grayscale:hover {
+  filter: grayscale(0) contrast(1.02) brightness(1);
+}
+
+/* Glowing Indicator Dot */
+.available-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  animation: pulse-green 2s infinite ease-in-out;
+}
+
+/* ── Custom CSS Phone Mockups (High-fidelity responsive iPhone/Android device screens) ── */
+
+.device-mockup-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+/* Premium iPhone Shell */
+.iphone-frame {
+  width: 100%;
+  height: 480px;
+  border-radius: 38px;
+  background: #1f1f23;
+  padding: 10px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    inset 0 0 3px 2px rgba(255, 255, 255, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  position: relative;
+  border: 2px solid #3a3a3c;
+  display: flex;
+  flex-direction: column;
+}
+
+.iphone-frame::before {
+  /* iPhone Dynamic Island / Speaker notch */
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 22px;
+  background: #000;
+  border-radius: 12px;
+  z-index: 10;
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.iphone-screen {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #0d0d0f;
+  position: relative;
+  border: 1px solid #1f1f23;
+}
+
+.iphone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.device-mockup-wrapper:hover img {
+  transform: scale(1.06);
+}
+
+/* Premium Android Frame */
+.android-frame {
+  width: 100%;
+  height: 480px;
+  border-radius: 24px;
+  background: #121214;
+  padding: 8px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  position: relative;
+  border: 3px solid #2e2e32;
+  display: flex;
+  flex-direction: column;
+}
+
+.android-frame::before {
+  /* Android camera punch hole */
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #101012;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.android-screen {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #08080a;
+  position: relative;
+}
+
+.android-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hide default cursor on desktop for custom cursor */
+@media (min-width: 1025px) {
+  .custom-cursor-active, 
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Active Navigation indicator */
+.nav-pill-active {
+  position: relative;
+}
+
+.nav-pill-active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: var(--accent-blue);
+  border-radius: 50%;
+}
