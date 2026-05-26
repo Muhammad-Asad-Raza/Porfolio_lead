@@ -1,6 +1,31 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
 import hamzaBhaiPic from '../assets/b5facb49860fbecc2e0c6ea8b49914505f2cfbec.png';
+
+const AnimatedNumber = ({ value }) => {
+  const nodeRef = useRef(null);
+  const isInView = useInView(nodeRef, { once: true, margin: "-50px" });
+  
+  const numMatch = value.match(/^(\d+)/);
+  const targetNum = numMatch ? parseInt(numMatch[0]) : null;
+  const suffix = targetNum !== null ? value.replace(/^\d+/, '') : value;
+
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    if (isInView && targetNum !== null) {
+      animate(count, targetNum, { duration: 2, ease: "easeOut" });
+    }
+  }, [isInView, targetNum, count]);
+
+  return (
+    <span ref={nodeRef}>
+      {targetNum !== null ? <motion.span>{rounded}</motion.span> : null}
+      {suffix}
+    </span>
+  );
+};
 
 const Hero = () => {
   // Looping Typewriter State for App Developer
@@ -195,8 +220,15 @@ const Hero = () => {
           </div>
 
           {/* Row 2: Full-Stackkk... (Figma spec: Top: 397px, Left: 50px, Size: 200px, Inter Bold 700, -8% Letter Spacing) */}
-          <h1 
+          <motion.h1 
             className="hero-row-2"
+            initial={{ opacity: 0, y: 80, rotateX: 45, filter: 'blur(20px)' }}
+            animate={{ opacity: 1, y: 0, rotateX: 0, filter: 'blur(0px)' }}
+            transition={{ 
+              duration: 1.4, 
+              ease: [0.16, 1, 0.3, 1], // Ultra-smooth Apple-like custom easing
+              delay: 0.2 
+            }}
             style={{
               position: 'absolute',
               top: '397px', // Exact Figma Top Coordinate
@@ -209,11 +241,26 @@ const Hero = () => {
               fontFamily: 'Inter, var(--font-sans), sans-serif',
               whiteSpace: 'nowrap',
               pointerEvents: 'auto',
-              zIndex: 3
+              zIndex: 3,
+              transformOrigin: 'left center',
+              perspective: '1000px'
             }}
           >
-            Full-<span style={{ color: '#E6E9F9' }}>Sta</span><span style={{ color: 'var(--accent-blue)' }}>ckkk...</span>
-          </h1>
+            Full<motion.span 
+              whileHover={{ 
+                textShadow: '0px 0px 30px rgba(133, 0, 214, 0.8), 0px 0px 60px rgba(133, 0, 214, 0.4)',
+                color: '#a832f0',
+                scale: 1.02
+              }}
+              transition={{ duration: 0.3, type: 'spring', stiffness: 300 }}
+              style={{ 
+                color: '#8500d6', 
+                display: 'inline-block', 
+                cursor: 'crosshair',
+                transformOrigin: 'left center'
+              }}
+            >-Stack..</motion.span>
+          </motion.h1>
 
           {/* Row 3: App Developer Typewriter (Figma Spec: Top: 570px, Left: 505px, Size: 120px, Instrument Serif, 0% Letter Spacing) */}
           <h2 
@@ -399,6 +446,123 @@ const Hero = () => {
           </pre>
         </motion.div>
       </div>
+
+      {/* Stats Section */}
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.15, delayChildren: 0.2 }
+          }
+        }}
+        style={{
+          width: '100%',
+          maxWidth: '1200px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginTop: '80px',
+          marginBottom: '60px',
+          padding: '0 24px',
+          flexWrap: 'wrap',
+          gap: '30px'
+        }}
+      >
+        {[
+          { value: '10+', label: 'Years Experience' },
+          { value: '109+', label: 'App Deployed' },
+          { value: '20/7', label: 'Support Available' },
+          { value: '96%', label: 'Clients Satisfaction' }
+        ].map((stat, idx) => (
+          <motion.div 
+            key={idx} 
+            className="stat-box"
+            variants={{
+              hidden: { opacity: 0, y: 40, scale: 0.8, filter: 'blur(10px)' },
+              visible: { 
+                opacity: 1, 
+                y: 0, 
+                scale: 1, 
+                filter: 'blur(0px)',
+                transition: { type: 'spring', damping: 20, stiffness: 100 }
+              }
+            }}
+            whileHover={{ scale: 1.1 }}
+            style={{ textAlign: 'center', flex: '1 1 200px', cursor: 'default' }}
+          >
+            <h3 
+              style={{ 
+                fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', 
+                fontWeight: 600, 
+                color: 'var(--accent-blue)',
+                fontFamily: 'var(--font-sans)',
+                marginBottom: '8px',
+                lineHeight: 1
+              }}
+            >
+              <AnimatedNumber value={stat.value} />
+            </h3>
+            <p 
+              style={{ 
+                fontSize: '0.9rem', 
+                color: 'var(--text-secondary)',
+                fontWeight: 400,
+                fontFamily: 'var(--font-sans)'
+              }}
+            >
+              {stat.label}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Banner */}
+      <motion.div 
+        initial={{ scaleX: 0, opacity: 0 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+        style={{ 
+          width: '100%', 
+          backgroundColor: '#050505',
+          padding: '24px 0',
+          display: 'flex', 
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: '40px',
+          transformOrigin: 'center'
+        }}
+      >
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
+          style={{
+            color: '#ffffff',
+            fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
+            fontWeight: 400,
+            margin: 0,
+            fontFamily: 'var(--font-sans)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '20px',
+            whiteSpace: 'nowrap'
+          }}
+        >
+          <span style={{ color: 'rgba(255,255,255,0.4)' }}>Apps That Scale Beyond MVP</span>
+          <motion.span 
+            animate={{ rotate: 360 }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
+            style={{ color: '#9b51e0', display: 'inline-block' }}
+          >✱</motion.span>
+          <span style={{ color: 'rgba(255,255,255,0.4)' }}>Turning Startup Ideas Into Reality</span>
+        </motion.h2>
+      </motion.div>
 
       {/* Responsive overrides via inline styles */}
       <style>{`
