@@ -1,170 +1,167 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaGooglePlay, FaApple, FaExternalLinkAlt } from 'react-icons/fa';
+import {
+  FaGithub, FaGooglePlay, FaApple,
+  FaExternalLinkAlt, FaChevronLeft, FaChevronRight,
+} from 'react-icons/fa';
 import { projects } from '../data/sampleData';
 
-/* ─── per-project image-fit hints ──────────────────────────────────────────
-   'cover'   → decorative / landscape images (fill the area, crop edges)
-   'contain' → promo / portrait mockups (show whole image, letterbox)        */
-const FIT_CONTAIN = new Set([
-  1, 2, 3, 4, 7, 11, 12, 13, 14, 15,   // promo multi-phone images
-  9, 10,                                 // portrait phone on coloured bg
-  102, 104, 108, 109,                    // APKPure thumbnails
-]);
+/* ─── Image display config ───────────────────────────────────
+   fit: 'contain' → portrait / dual-phone screenshots
+   fit: 'cover'   → landscape / decorative-bg images          */
+const IMG_CFG = {
+  1:   { fit: 'cover',   bg: '#e8f0f8' },
+  2:   { fit: 'contain', bg: '#111217' },
+  3:   { fit: 'contain', bg: '#141824' },
+  4:   { fit: 'cover',   bg: '#0c1223' },
+  5:   { fit: 'contain', bg: '#f0f4ff' },
+  6:   { fit: 'contain', bg: '#f0f4ff' },
+  7:   { fit: 'cover',   bg: '#fff'    },
+  8:   { fit: 'contain', bg: '#061806' },
+  9:   { fit: 'contain', bg: '#c0392b' },
+  10:  { fit: 'contain', bg: '#faf4f8' },
+  11:  { fit: 'cover',   bg: '#f8f8f8' },
+  12:  { fit: 'cover',   bg: '#e8f4fc' },
+  13:  { fit: 'cover',   bg: '#0c1020' },
+  14:  { fit: 'cover',   bg: '#ff7b00' },
+  15:  { fit: 'cover',   bg: '#fff'    },
+  101: { fit: 'cover',   bg: '#1a0e2e' },
+  102: { fit: 'cover',   bg: '#e0f0f8' },
+  103: { fit: 'cover',   bg: '#e8f4ee' },
+  104: { fit: 'cover',   bg: '#0a1a2e' },
+  105: { fit: 'contain', bg: '#e8f4ff' },
+  106: { fit: 'contain', bg: '#f0f4ff' },
+  107: { fit: 'contain', bg: '#0c1e3c' },
+  108: { fit: 'cover',   bg: '#000f1f' },
+  109: { fit: 'cover',   bg: '#061406' },
+  110: { fit: 'contain',   bg: '#e85d20' },   // Niyyah - coloured promo bg
+};
 
-const containerVariants = {
+/* ─── Tech badge palette ─────────────────────────────────── */
+const TECH = {
+  'React Native': { bg: 'rgba(97,218,251,0.12)',  color: '#38bdf8', bd: 'rgba(97,218,251,0.25)' },
+  'Flutter':      { bg: 'rgba(84,197,248,0.12)',  color: '#67e8f9', bd: 'rgba(84,197,248,0.25)' },
+  'React JS':     { bg: 'rgba(97,218,251,0.12)',  color: '#38bdf8', bd: 'rgba(97,218,251,0.25)' },
+  'Next JS':      { bg: 'rgba(255,255,255,0.07)', color: '#cbd5e1', bd: 'rgba(255,255,255,0.12)' },
+  'Node JS':      { bg: 'rgba(74,222,128,0.1)',   color: '#4ade80', bd: 'rgba(74,222,128,0.22)' },
+  '.NET Core':    { bg: 'rgba(167,139,250,0.12)', color: '#a78bfa', bd: 'rgba(167,139,250,0.25)' },
+  'Firebase':     { bg: 'rgba(251,191,36,0.1)',   color: '#fbbf24', bd: 'rgba(251,191,36,0.22)' },
+  'MySQL':        { bg: 'rgba(96,165,250,0.1)',   color: '#60a5fa', bd: 'rgba(96,165,250,0.22)' },
+  'MongoDB':      { bg: 'rgba(74,222,128,0.1)',   color: '#4ade80', bd: 'rgba(74,222,128,0.22)' },
+  'WebRTC':       { bg: 'rgba(251,191,36,0.1)',   color: '#fbbf24', bd: 'rgba(251,191,36,0.22)' },
+  'AWS Lambda':   { bg: 'rgba(251,146,60,0.1)',   color: '#fb923c', bd: 'rgba(251,146,60,0.22)' },
+  'Stripe':       { bg: 'rgba(129,140,248,0.1)',  color: '#818cf8', bd: 'rgba(129,140,248,0.22)' },
+  'Google Maps':  { bg: 'rgba(52,211,153,0.1)',   color: '#34d399', bd: 'rgba(52,211,153,0.22)' },
+  'GPS API':      { bg: 'rgba(52,211,153,0.1)',   color: '#34d399', bd: 'rgba(52,211,153,0.22)' },
+  'SQL Server':   { bg: 'rgba(96,165,250,0.1)',   color: '#60a5fa', bd: 'rgba(96,165,250,0.22)' },
+};
+const getTech = t => TECH[t] || { bg: 'rgba(255,255,255,0.06)', color: '#94a3b8', bd: 'rgba(255,255,255,0.1)' };
+
+const CATS = ['All', 'Mobile', 'Web'];
+
+/* ─── Motion variants ────────────────────────────────────── */
+const gridV = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
+  show: { transition: { staggerChildren: 0.065, delayChildren: 0.05 } },
+};
+const cardV = {
+  hidden: { opacity: 0, y: 40, scale: 0.96 },
+  show:   { opacity: 1, y: 0,  scale: 1,
+    transition: { duration: 0.52, ease: [0.22, 1, 0.36, 1] } },
+  exit:   { opacity: 0, scale: 0.94, y: -24,
+    transition: { duration: 0.26, ease: 'easeIn' } },
 };
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-  exit:   { opacity: 0, y: -20, scale: 0.95, transition: { duration: 0.3 } },
-};
-
-const CATEGORIES = ['All', 'Mobile', 'Web'];
-
-const STORE_BTN = {
-  base: {
-    display: 'flex', alignItems: 'center', gap: '6px',
-    padding: '7px 13px', borderRadius: '20px', fontSize: '0.75rem',
-    fontWeight: 600, textDecoration: 'none', border: 'none',
-    cursor: 'pointer', transition: 'all 0.22s ease', whiteSpace: 'nowrap',
-    fontFamily: 'var(--font-sans)',
-  },
-  github:    { background: 'rgba(255,255,255,0.08)', color: '#e2e8f0', border: '1px solid rgba(255,255,255,0.15)' },
-  playstore: { background: 'rgba(0,210,90,0.15)',    color: '#00d25a', border: '1px solid rgba(0,210,90,0.3)' },
-  appstore:  { background: 'rgba(120,160,255,0.15)', color: '#7ab0ff', border: '1px solid rgba(120,160,255,0.3)' },
-  live:      { background: 'rgba(99,179,237,0.15)',  color: '#63b3ed', border: '1px solid rgba(99,179,237,0.3)' },
-};
-
-const TECH_COLORS = {
-  'React Native': '#61dafb22',
-  'Flutter':      '#54c5f822',
-  'Node JS':      '#68d39122',
-  '.NET Core':    '#9f7aea22',
-  'Firebase':     '#f6ad5522',
-  'MySQL':        '#4299e122',
-  'MongoDB':      '#68d39122',
-  'WebRTC':       '#f6ad5522',
-  'AWS Lambda':   '#ed893622',
-  'Stripe':       '#6875f522',
-  'Google Maps':  '#48bb7822',
-};
-
-function getTechColor(tech) {
-  return TECH_COLORS[tech] || 'rgba(255,255,255,0.07)';
-}
-
+/* ════════════════════════════════════════════════════════════
+   SECTION
+════════════════════════════════════════════════════════════ */
 export default function Projects() {
-  const [filter, setFilter] = useState('All');
-
-  const filtered = projects.filter(p =>
-    filter === 'All' ? true : p.category === filter
-  );
-
-  const getObjectFit = (id) => FIT_CONTAIN.has(id) ? 'contain' : 'cover';
-  const getImgBg    = (id) => FIT_CONTAIN.has(id) ? '#0f1117' : '#0f1117';
+  const [cat, setCat] = useState('All');
+  const filtered = projects.filter(p => cat === 'All' || p.category === cat);
 
   return (
     <section
       id="portfolio"
       style={{
-        padding: '120px 24px 100px',
+        padding: '110px 20px 96px',
         background: 'var(--bg-secondary)',
-        borderTop:    '1px solid var(--border-light)',
+        borderTop: '1px solid var(--border-light)',
         borderBottom: '1px solid var(--border-light)',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Ambient blobs */}
-      <div style={{
-        position: 'absolute', top: '-200px', right: '-200px',
-        width: '600px', height: '600px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(99,179,237,0.06) 0%, transparent 70%)',
-        pointerEvents: 'none',
-      }} />
-      <div style={{
-        position: 'absolute', bottom: '-150px', left: '-150px',
-        width: '500px', height: '500px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(154,96,255,0.06) 0%, transparent 70%)',
-        pointerEvents: 'none',
-      }} />
+      {/* Ambient glows */}
+      <span style={blob('#2563eb', '-180px', 'auto', '-80px', 'auto', '560px')} />
+      <span style={blob('#7c3aed', 'auto', '-120px', 'auto', '-80px', '480px')} />
 
-      <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative' }}>
+      <div style={{ maxWidth: '1260px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
 
         {/* ── Header ── */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          style={{ textAlign: 'center', marginBottom: '64px' }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          style={{ textAlign: 'center', marginBottom: '58px' }}
         >
           <span style={{
-            display: 'inline-block',
-            background: 'linear-gradient(135deg,rgba(99,179,237,0.15),rgba(154,96,255,0.15))',
-            border: '1px solid rgba(99,179,237,0.25)',
-            color: '#63b3ed', fontSize: '0.78rem', fontWeight: 700,
-            letterSpacing: '0.12em', textTransform: 'uppercase',
-            padding: '6px 18px', borderRadius: '50px', marginBottom: '20px',
+            display: 'inline-flex', alignItems: 'center', gap: '7px',
+            background: 'rgba(37,99,235,0.1)',
+            border: '1px solid rgba(37,99,235,0.2)',
+            borderRadius: '50px', padding: '5px 16px', marginBottom: '20px',
           }}>
-            Portfolio
+            <span style={{
+              width: '6px', height: '6px', borderRadius: '50%',
+              background: 'linear-gradient(135deg,#3b82f6,#8b5cf6)', display: 'inline-block',
+            }} />
+            <span style={{
+              fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.14em',
+              color: '#60a5fa', textTransform: 'uppercase', fontFamily: 'var(--font-sans)',
+            }}>
+              Portfolio
+            </span>
           </span>
 
           <h2
             className="font-serif"
             style={{
-              fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
-              fontWeight: 400,
-              color: 'var(--text-primary)',
-              lineHeight: 1.1,
-              marginBottom: '12px',
+              fontSize: 'clamp(2.4rem, 5vw, 3.8rem)', fontWeight: 400,
+              color: 'var(--text-primary)', lineHeight: 1.1, marginBottom: '14px',
             }}
           >
-            My Projects
+            Projects I've Built
           </h2>
           <p style={{
-            color: 'var(--text-secondary)', fontSize: '1.05rem',
-            fontFamily: 'var(--font-sans)', maxWidth: '480px',
-            margin: '0 auto 40px',
+            color: 'var(--text-secondary)', fontSize: '1rem',
+            fontFamily: 'var(--font-sans)', maxWidth: '440px',
+            margin: '0 auto 42px', lineHeight: 1.7,
           }}>
-            Real apps — shipped to production, used by real people.
+            Real apps — shipped to production, used by real people worldwide.
           </p>
 
           {/* Filter pills */}
           <div style={{
-            display: 'inline-flex',
-            background: 'var(--bg-primary)',
+            display: 'inline-flex', gap: '4px',
+            background: 'var(--bg-tertiary)',
             border: '1px solid var(--border-light)',
-            padding: '5px', borderRadius: '40px',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
-            gap: '4px',
+            padding: '4px', borderRadius: '50px',
           }}>
-            {CATEGORIES.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
+            {CATS.map(c => (
+              <motion.button
+                key={c} onClick={() => setCat(c)} whileTap={{ scale: 0.95 }}
                 style={{
-                  background: filter === cat
-                    ? 'linear-gradient(135deg,#4299e1,#7c3aed)'
-                    : 'transparent',
-                  color: filter === cat ? '#fff' : 'var(--text-secondary)',
-                  border: 'none',
-                  padding: '9px 26px',
-                  borderRadius: '30px',
-                  fontSize: '0.88rem',
-                  fontWeight: filter === cat ? 700 : 500,
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  fontFamily: 'var(--font-sans)',
-                  boxShadow: filter === cat ? '0 4px 12px rgba(66,153,225,0.35)' : 'none',
+                  padding: '8px 26px', borderRadius: '40px', border: 'none',
+                  cursor: 'pointer', fontSize: '0.875rem', fontFamily: 'var(--font-sans)',
+                  fontWeight: cat === c ? 700 : 500,
+                  background: cat === c ? 'linear-gradient(135deg,#2563eb,#7c3aed)' : 'transparent',
+                  color: cat === c ? '#fff' : 'var(--text-secondary)',
+                  boxShadow: cat === c ? '0 4px 14px rgba(37,99,235,0.4)' : 'none',
+                  transition: 'all 0.28s cubic-bezier(0.22,1,0.36,1)',
                 }}
               >
-                {cat}
-              </button>
+                {c}
+              </motion.button>
             ))}
           </div>
         </motion.div>
@@ -172,48 +169,42 @@ export default function Projects() {
         {/* ── Grid ── */}
         <motion.div
           layout
-          variants={containerVariants}
+          variants={gridV}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: '-80px' }}
+          viewport={{ once: true, margin: '-50px' }}
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))',
-            gap: '28px',
-            marginBottom: '80px',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
+            gap: '22px',
+            marginBottom: '70px',
           }}
         >
           <AnimatePresence mode="popLayout">
-            {filtered.map(project => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                objectFit={getObjectFit(project.id)}
-                imgBg={getImgBg(project.id)}
-              />
-            ))}
+            {filtered.map(p => <ProjectCard key={p.id} project={p} />)}
           </AnimatePresence>
         </motion.div>
 
-        {/* ── Footer quote ── */}
+        {/* ── Footer ── */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}
+          transition={{ duration: 0.55 }}
+          style={{
+            textAlign: 'center', paddingTop: '44px',
+            borderTop: '1px solid var(--border-light)',
+          }}
         >
-          <p
-            className="font-serif"
-            style={{
-              fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
-              color: 'var(--text-secondary)',
-              lineHeight: 1.7,
-              fontWeight: 400,
-            }}
-          >
-            Every project is built with transparency, collaboration, and{' '}
-            <span style={{ color: 'var(--accent-blue)' }}>pixel-perfect attention to detail.</span>
+          <p className="font-serif" style={{
+            fontSize: 'clamp(1.05rem, 2vw, 1.45rem)',
+            color: 'var(--text-secondary)', lineHeight: 1.75,
+            fontWeight: 400, maxWidth: '620px', margin: '0 auto',
+          }}>
+            Every project starts with a conversation and ends with{' '}
+            <span style={{ color: 'var(--accent-blue)', fontStyle: 'italic' }}>
+              something people actually love.
+            </span>
           </p>
         </motion.div>
       </div>
@@ -221,192 +212,222 @@ export default function Projects() {
   );
 }
 
-/* ════════════════════════════════════════════════
+/* ════════════════════════════════════════════════════════════
    PROJECT CARD
-════════════════════════════════════════════════ */
-function ProjectCard({ project, objectFit, imgBg }) {
+════════════════════════════════════════════════════════════ */
+function ProjectCard({ project }) {
   const [hovered, setHovered] = useState(false);
+
+  // image carousel
+  const allImgs  = project.images || [project.image];
+  const multiImg = allImgs.length > 1;
+  const [idx, setIdx]   = useState(0);
+  const [dir, setDir]   = useState(1);   // 1=next, -1=prev
+  const [auto, setAuto] = useState(true);
+
+  const goTo = useCallback((next, direction = 1) => {
+    setDir(direction);
+    setIdx(next);
+  }, []);
+
+  // Auto-advance every 3 s
+  useEffect(() => {
+    if (!multiImg || !auto) return;
+    const t = setTimeout(() => goTo((idx + 1) % allImgs.length, 1), 3000);
+    return () => clearTimeout(t);
+  }, [idx, auto, multiImg, allImgs.length, goTo]);
+
+  const prev = () => { setAuto(false); goTo((idx - 1 + allImgs.length) % allImgs.length, -1); };
+  const next = () => { setAuto(false); goTo((idx + 1) % allImgs.length,  1); };
+
+  const cfg      = IMG_CFG[project.id] || { fit: 'cover', bg: 'var(--bg-tertiary)' };
+  const hasStore = project.playstore || project.appstore || project.live;
+
+  const imgVariants = {
+    enter: d => ({ x: d > 0 ? '100%' : '-100%', opacity: 0 }),
+    center:    { x: 0, opacity: 1, transition: { duration: 0.38, ease: [0.22, 1, 0.36, 1] } },
+    exit:  d => ({ x: d > 0 ? '-100%' : '100%', opacity: 0,
+      transition: { duration: 0.28, ease: 'easeIn' } }),
+  };
 
   return (
     <motion.div
       layout
-      variants={cardVariants}
+      variants={cardV}
       exit="exit"
-      whileHover={{ y: -6 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 22 }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      style={{
-        borderRadius: '20px',
-        border: `1px solid ${hovered ? 'rgba(99,179,237,0.3)' : 'var(--border-light)'}`,
-        background: hovered
-          ? 'linear-gradient(160deg,rgba(20,28,46,0.98),rgba(15,20,38,0.98))'
-          : 'var(--card-bg)',
+      animate={{
+        y: hovered ? -7 : 0,
         boxShadow: hovered
-          ? '0 20px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(99,179,237,0.15)'
-          : '0 4px 24px rgba(0,0,0,0.2)',
+          ? '0 20px 52px rgba(0,0,0,0.45), 0 0 0 1px rgba(96,165,250,0.18)'
+          : '0 4px 20px rgba(0,0,0,0.22)',
+      }}
+      transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+      style={{
+        borderRadius: '18px',
+        border: `1px solid ${hovered ? 'rgba(96,165,250,0.25)' : 'var(--border-light)'}`,
+        background: 'var(--card-bg)',
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
-        transition: 'border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease',
         cursor: 'default',
+        transition: 'border-color 0.3s ease',
+        position: 'relative',
       }}
     >
-      {/* ── Image ── */}
-      <div style={{
-        position: 'relative',
-        height: '230px',
-        background: imgBg,
-        overflow: 'hidden',
-        flexShrink: 0,
-      }}>
-        <motion.img
-          src={project.image}
-          alt={project.title}
-          animate={{ scale: hovered ? 1.04 : 1 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit,
-            objectPosition: 'top center',
-            display: 'block',
-          }}
-        />
+      {/* ── Image / Carousel ── */}
+      <div
+        style={{
+          position: 'relative', height: '234px',
+          background: cfg.bg, overflow: 'hidden', flexShrink: 0,
+        }}
+        onMouseEnter={() => setAuto(false)}
+        onMouseLeave={() => setAuto(true)}
+      >
+        {/* Sliding images */}
+        <AnimatePresence custom={dir} mode="popLayout">
+          <motion.img
+            key={idx}
+            src={allImgs[idx]}
+            alt={project.title}
+            custom={dir}
+            variants={imgVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            style={{
+              position: 'absolute', inset: 0,
+              width: '100%', height: '100%',
+              objectFit: cfg.fit, objectPosition: 'center',
+              display: 'block',
+            }}
+          />
+        </AnimatePresence>
 
-        {/* Gradient overlay at bottom */}
+        {/* Bottom gradient */}
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'linear-gradient(to top, rgba(10,12,25,0.85) 0%, transparent 55%)',
-          pointerEvents: 'none',
+          background: 'linear-gradient(to top,rgba(10,14,26,0.88) 0%,rgba(10,14,26,0.2) 38%,transparent 60%)',
+          pointerEvents: 'none', zIndex: 1,
         }} />
+
+        {/* Carousel arrows (only if multiple images) */}
+        {multiImg && (
+          <>
+            <CarouselBtn side="left"  onClick={prev} show={hovered}><FaChevronLeft  size={12} /></CarouselBtn>
+            <CarouselBtn side="right" onClick={next} show={hovered}><FaChevronRight size={12} /></CarouselBtn>
+
+            {/* Dots */}
+            <div style={{
+              position: 'absolute', bottom: '10px', left: 0, right: 0,
+              display: 'flex', justifyContent: 'center', gap: '5px', zIndex: 3,
+            }}>
+              {allImgs.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => { setAuto(false); goTo(i, i > idx ? 1 : -1); }}
+                  style={{
+                    width: i === idx ? '18px' : '6px',
+                    height: '6px', borderRadius: '3px', border: 'none',
+                    background: i === idx ? '#60a5fa' : 'rgba(255,255,255,0.4)',
+                    cursor: 'pointer', padding: 0,
+                    transition: 'all 0.3s ease',
+                  }}
+                />
+              ))}
+            </div>
+          </>
+        )}
 
         {/* Category badge */}
         <div style={{
-          position: 'absolute', top: '14px', left: '14px',
-          background: project.category === 'Mobile'
-            ? 'linear-gradient(135deg,#4299e1,#7c3aed)'
-            : 'linear-gradient(135deg,#38a169,#2b6cb0)',
-          color: '#fff', fontSize: '0.68rem', fontWeight: 700,
-          letterSpacing: '0.08em', textTransform: 'uppercase',
-          padding: '4px 12px', borderRadius: '30px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+          position: 'absolute', top: '13px', left: '13px', zIndex: 4,
+          background: 'linear-gradient(135deg,#2563eb,#7c3aed)',
+          color: '#fff', fontSize: '0.62rem', fontWeight: 800,
+          letterSpacing: '0.12em', textTransform: 'uppercase',
+          padding: '4px 11px', borderRadius: '50px',
           fontFamily: 'var(--font-sans)',
+          boxShadow: '0 3px 10px rgba(37,99,235,0.45)',
         }}>
           {project.category}
         </div>
 
-        {/* Store icons on image (top-right) */}
+        {/* Store icons top-right */}
         <div style={{
-          position: 'absolute', top: '12px', right: '12px',
-          display: 'flex', gap: '6px',
+          position: 'absolute', top: '11px', right: '11px',
+          display: 'flex', gap: '6px', zIndex: 4,
         }}>
+          {project.github && (
+            <IcoBubble href={project.github} title="GitHub" cl="#94a3b8"><FaGithub size={12} /></IcoBubble>
+          )}
           {project.playstore && (
-            <a href={project.playstore} target="_blank" rel="noreferrer"
-              title="Google Play" style={iconBubble('#00d25a')}>
-              <FaGooglePlay size={12} />
-            </a>
+            <IcoBubble href={project.playstore} title="Play Store" cl="#4ade80"><FaGooglePlay size={11} /></IcoBubble>
           )}
           {project.appstore && (
-            <a href={project.appstore} target="_blank" rel="noreferrer"
-              title="App Store" style={iconBubble('#7ab0ff')}>
-              <FaApple size={13} />
-            </a>
+            <IcoBubble href={project.appstore} title="App Store" cl="#60a5fa"><FaApple size={13} /></IcoBubble>
           )}
           {project.live && (
-            <a href={project.live} target="_blank" rel="noreferrer"
-              title="Live" style={iconBubble('#63b3ed')}>
-              <FaExternalLinkAlt size={11} />
-            </a>
+            <IcoBubble href={project.live} title="Live" cl="#fbbf24"><FaExternalLinkAlt size={10} /></IcoBubble>
           )}
         </div>
       </div>
 
       {/* ── Content ── */}
       <div style={{
-        padding: '20px 22px 22px',
-        display: 'flex', flexDirection: 'column', flex: 1, gap: '12px',
+        padding: '18px 20px 20px',
+        display: 'flex', flexDirection: 'column', flex: 1, gap: '9px',
       }}>
+        <h3 style={{
+          margin: 0, fontSize: '1.06rem', fontWeight: 700,
+          color: 'var(--text-primary)', fontFamily: 'var(--font-sans)', lineHeight: 1.3,
+        }}>
+          {project.title}
+        </h3>
 
-        {/* Title + GitHub */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '10px' }}>
-          <h3 style={{
-            fontSize: '1.1rem', fontWeight: 700,
-            color: 'var(--text-primary)',
-            fontFamily: 'var(--font-sans)',
-            lineHeight: 1.3, margin: 0,
-          }}>
-            {project.title}
-          </h3>
-          {project.github && (
-            <a href={project.github} target="_blank" rel="noreferrer"
-              title="GitHub" style={{
-                color: 'var(--text-secondary)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                width: '32px', height: '32px', borderRadius: '50%', flexShrink: 0,
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                transition: 'all 0.2s',
-              }}
-              onMouseEnter={e => { e.currentTarget.style.background='rgba(255,255,255,0.12)'; e.currentTarget.style.color='#fff'; }}
-              onMouseLeave={e => { e.currentTarget.style.background='rgba(255,255,255,0.05)'; e.currentTarget.style.color=''; }}
-            >
-              <FaGithub size={14} />
-            </a>
-          )}
-        </div>
-
-        {/* Description */}
         <p style={{
-          fontSize: '0.875rem',
-          color: 'var(--text-secondary)',
-          lineHeight: 1.6,
-          fontFamily: 'var(--font-sans)',
-          margin: 0, flex: 1,
+          margin: 0, fontSize: '0.845rem',
+          color: 'var(--text-secondary)', lineHeight: 1.65,
+          fontFamily: 'var(--font-sans)', flex: 1,
         }}>
           {project.description}
         </p>
 
-        {/* Tech stack */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '4px' }}>
-          {project.tech.map(t => (
-            <span key={t} style={{
-              background: getTechColor(t),
-              color: 'var(--text-secondary)',
-              fontSize: '0.72rem', fontWeight: 600,
-              padding: '3px 10px', borderRadius: '20px',
-              border: '1px solid rgba(255,255,255,0.08)',
-              fontFamily: 'var(--font-sans)',
-            }}>
-              {t}
-            </span>
-          ))}
+        {/* Tech badges */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', paddingTop: '2px' }}>
+          {project.tech.map(t => {
+            const s = getTech(t);
+            return (
+              <span key={t} style={{
+                background: s.bg, color: s.color,
+                border: `1px solid ${s.bd}`,
+                fontSize: '0.68rem', fontWeight: 700,
+                padding: '3px 9px', borderRadius: '50px',
+                fontFamily: 'var(--font-sans)',
+              }}>
+                {t}
+              </span>
+            );
+          })}
         </div>
 
-        {/* Store buttons row */}
-        {(project.playstore || project.appstore || project.live) && (
+        {/* Store buttons */}
+        {hasStore && (
           <div style={{
-            display: 'flex', flexWrap: 'wrap', gap: '8px',
-            paddingTop: '12px',
-            borderTop: '1px solid rgba(255,255,255,0.07)',
+            display: 'flex', flexWrap: 'wrap', gap: '7px',
+            paddingTop: '11px', borderTop: '1px solid var(--border-light)',
           }}>
             {project.playstore && (
-              <a href={project.playstore} target="_blank" rel="noreferrer"
-                style={{ ...STORE_BTN.base, ...STORE_BTN.playstore }}>
-                <FaGooglePlay size={11} /> Play Store
-              </a>
+              <SBtn href={project.playstore} icon={<FaGooglePlay size={10} />}
+                label="Play Store" g="linear-gradient(135deg,#16a34a,#22c55e)" s="rgba(22,163,74,0.35)" />
             )}
             {project.appstore && (
-              <a href={project.appstore} target="_blank" rel="noreferrer"
-                style={{ ...STORE_BTN.base, ...STORE_BTN.appstore }}>
-                <FaApple size={12} /> App Store
-              </a>
+              <SBtn href={project.appstore} icon={<FaApple size={11} />}
+                label="App Store" g="linear-gradient(135deg,#2563eb,#60a5fa)" s="rgba(37,99,235,0.35)" />
             )}
             {project.live && (
-              <a href={project.live} target="_blank" rel="noreferrer"
-                style={{ ...STORE_BTN.base, ...STORE_BTN.live }}>
-                <FaExternalLinkAlt size={10} /> Live
-              </a>
+              <SBtn href={project.live} icon={<FaExternalLinkAlt size={9} />}
+                label="Live" g="linear-gradient(135deg,#d97706,#f59e0b)" s="rgba(217,119,6,0.35)" />
             )}
           </div>
         )}
@@ -415,13 +436,85 @@ function ProjectCard({ project, objectFit, imgBg }) {
   );
 }
 
-function iconBubble(color) {
+/* ─── Carousel Arrow ────────────────────────────────────── */
+function CarouselBtn({ side, onClick, show, children }) {
+  const [hov, setHov] = useState(false);
+  return (
+    <button
+      onClick={onClick}
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        position: 'absolute', top: '50%',
+        [side]: '8px',
+        transform: `translateY(-50%) scale(${hov ? 1.12 : 1})`,
+        zIndex: 4,
+        width: '30px', height: '30px', borderRadius: '50%',
+        background: 'rgba(0,0,0,0.55)',
+        backdropFilter: 'blur(6px)',
+        border: '1px solid rgba(255,255,255,0.15)',
+        color: '#fff', cursor: 'pointer',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        opacity: show ? 1 : 0,
+        transition: 'opacity 0.25s ease, transform 0.2s ease',
+        padding: 0,
+      }}
+    >
+      {children}
+    </button>
+  );
+}
+
+/* ─── Icon bubble ───────────────────────────────────────── */
+function IcoBubble({ href, title, cl, children }) {
+  const [h, setH] = useState(false);
+  return (
+    <a href={href} target="_blank" rel="noreferrer" title={title}
+      onMouseEnter={() => setH(true)} onMouseLeave={() => setH(false)}
+      style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        width: '28px', height: '28px', borderRadius: '50%',
+        background: h ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.5)',
+        backdropFilter: 'blur(6px)',
+        border: `1px solid ${cl}55`, color: cl,
+        textDecoration: 'none', flexShrink: 0,
+        transform: h ? 'scale(1.14) translateY(-1px)' : 'scale(1)',
+        transition: 'all 0.2s ease',
+      }}
+    >
+      {children}
+    </a>
+  );
+}
+
+/* ─── Store button ──────────────────────────────────────── */
+function SBtn({ href, icon, label, g, s }) {
+  const [h, setH] = useState(false);
+  return (
+    <a href={href} target="_blank" rel="noreferrer"
+      onMouseEnter={() => setH(true)} onMouseLeave={() => setH(false)}
+      style={{
+        display: 'inline-flex', alignItems: 'center', gap: '6px',
+        background: g, color: '#fff',
+        fontSize: '0.71rem', fontWeight: 700,
+        padding: '6px 14px', borderRadius: '50px',
+        textDecoration: 'none', fontFamily: 'var(--font-sans)',
+        boxShadow: h ? `0 6px 18px ${s}` : `0 2px 8px ${s}`,
+        transform: h ? 'translateY(-2px)' : 'none',
+        transition: 'all 0.22s ease', whiteSpace: 'nowrap',
+      }}
+    >
+      {icon}{label}
+    </a>
+  );
+}
+
+/* ─── Blob helper ───────────────────────────────────────── */
+function blob(color, top, right, bottom, left, size) {
   return {
-    display: 'flex', alignItems: 'center', justifyContent: 'center',
-    width: '28px', height: '28px', borderRadius: '50%',
-    background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(6px)',
-    border: `1px solid ${color}55`, color,
-    textDecoration: 'none', transition: 'transform 0.2s',
-    flexShrink: 0,
+    position: 'absolute', top, right, bottom, left,
+    width: size, height: size, borderRadius: '50%',
+    background: `radial-gradient(circle, ${color}14 0%, transparent 68%)`,
+    pointerEvents: 'none', display: 'block',
   };
 }
