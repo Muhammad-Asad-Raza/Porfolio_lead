@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:numbering xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" xmlns:cx1="http://schemas.microsoft.com/office/drawing/2015/9/8/chartex" xmlns:cx2="http://schemas.microsoft.com/office/drawing/2015/10/21/chartex" xmlns:cx3="http://schemas.microsoft.com/office/drawing/2016/5/9/chartex" xmlns:cx4="http://schemas.microsoft.com/office/drawing/2016/5/10/chartex" xmlns:cx5="http://schemas.microsoft.com/office/drawing/2016/5/11/chartex" xmlns:cx6="http://schemas.microsoft.com/office/drawing/2016/5/12/chartex" xmlns:cx7="http://schemas.microsoft.com/office/drawing/2016/5/13/chartex" xmlns:cx8="http://schemas.microsoft.com/office/drawing/2016/5/14/chartex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:aink="http://schemas.microsoft.com/office/drawing/2016/ink" xmlns:am3d="http://schemas.microsoft.com/office/drawing/2017/model3d" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:oel="http://schemas.microsoft.com/office/2019/extlst" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w16cex="http://schemas.microsoft.com/office/word/2018/wordml/cex" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid" xmlns:w16="http://schemas.microsoft.com/office/word/2018/wordml" xmlns:w16du="http://schemas.microsoft.com/office/word/2023/wordml/word16du" xmlns:w16sdtdh="http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash" xmlns:w16sdtfl="http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 w15 w16se w16cid w16 w16cex w16sdtdh w16sdtfl w16du wp14">
+  <w:abstractNum w:abstractNumId="0" w15:restartNumberingAfterBreak="0">
+    <w:nsid w:val="00A72DFE"/>
+    <w:multiLevelType w:val="hybridMultilevel"/>
+    <w:tmpl w:val="28E0973E"/>
+    <w:lvl w:ilvl="0" w:tplc="D38060CE">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="345"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Arial" w:eastAsia="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="1" w:tplc="484C0758">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="1440"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="2" w:tplc="24F63C82">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2160"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="3" w:tplc="BCE41C5C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2880"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Arial" w:eastAsia="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="4" w:tplc="713224F2">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="3600"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="5" w:tplc="9CEA4D82">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4320"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="6" w:tplc="FF2E4AC0">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5040"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Arial" w:eastAsia="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="7" w:tplc="36A01DA6">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5760"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="8" w:tplc="DFF20874">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="6480"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+  </w:abstractNum>
+  <w:abstractNum w:abstractNumId="1" w15:restartNumberingAfterBreak="0">
+    <w:nsid w:val="19D12B4E"/>
+    <w:multiLevelType w:val="hybridMultilevel"/>
+    <w:tmpl w:val="1C5C6C80"/>
+    <w:lvl w:ilvl="0" w:tplc="E244FFF6">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="●"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="405"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="1" w:tplc="2A709394">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="1300"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="2" w:tplc="43CAFA64">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2020"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="3" w:tplc="6EA6399E">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2740"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="4" w:tplc="B276EA8E">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="3460"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="5" w:tplc="DB5E24B2">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4180"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="6" w:tplc="0C4AF94C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4900"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="7" w:tplc="69EE2864">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5620"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="8" w:tplc="D5EA0892">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="6340"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+  </w:abstractNum>
+  <w:abstractNum w:abstractNumId="2" w15:restartNumberingAfterBreak="0">
+    <w:nsid w:val="2498148B"/>
+    <w:multiLevelType w:val="hybridMultilevel"/>
+    <w:tmpl w:val="BC0A5722"/>
+    <w:lvl w:ilvl="0" w:tplc="31EC9A96">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="●"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="405"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="1" w:tplc="DAAED4F8">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="1300"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="2" w:tplc="BE60FA06">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2020"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="3" w:tplc="6CEAC75C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2740"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="4" w:tplc="B76E95FE">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="3460"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="5" w:tplc="B44A13E8">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4180"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="6" w:tplc="21B8F4F4">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4900"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="7" w:tplc="E62A70FC">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5620"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="8" w:tplc="D15C473A">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="6340"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+  </w:abstractNum>
+  <w:abstractNum w:abstractNumId="3" w15:restartNumberingAfterBreak="0">
+    <w:nsid w:val="25D51863"/>
+    <w:multiLevelType w:val="hybridMultilevel"/>
+    <w:tmpl w:val="8C5C07E2"/>
+    <w:lvl w:ilvl="0" w:tplc="C2688896">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="●"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="405"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="1" w:tplc="4AA4F3B4">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="1300"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="2" w:tplc="079C2D18">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2020"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="3" w:tplc="44387552">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2740"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="4" w:tplc="43A8F820">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="3460"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="5" w:tplc="9F0039B0">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4180"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="6" w:tplc="9A1EE2E2">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4900"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="7" w:tplc="83D2B34C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5620"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="8" w:tplc="F3C45E22">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="6340"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+  </w:abstractNum>
+  <w:abstractNum w:abstractNumId="4" w15:restartNumberingAfterBreak="0">
+    <w:nsid w:val="3E742DD7"/>
+    <w:multiLevelType w:val="hybridMultilevel"/>
+    <w:tmpl w:val="7C2C14B8"/>
+    <w:lvl w:ilvl="0" w:tplc="316AFE5A">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="●"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="405"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="1" w:tplc="6122D188">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="1300"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="2" w:tplc="ED8A75D6">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2020"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="3" w:tplc="01E87548">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2740"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="4" w:tplc="CF8A57E2">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="3460"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="5" w:tplc="0D946044">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4180"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="6" w:tplc="7C5EA4AE">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4900"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="7" w:tplc="1E1C60EA">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5620"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="8" w:tplc="6D2CB88C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="6340"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+  </w:abstractNum>
+  <w:abstractNum w:abstractNumId="5" w15:restartNumberingAfterBreak="0">
+    <w:nsid w:val="4DB446DC"/>
+    <w:multiLevelType w:val="hybridMultilevel"/>
+    <w:tmpl w:val="44CCBBCA"/>
+    <w:lvl w:ilvl="0" w:tplc="BE265D98">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="●"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="405"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="1" w:tplc="E6447676">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="1300"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="2" w:tplc="04466C9C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2020"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="3" w:tplc="1CBA80DA">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2740"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="4" w:tplc="C1F088CA">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="3460"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="5" w:tplc="1E8AF618">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4180"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="6" w:tplc="AF6E8CF0">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4900"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="7" w:tplc="7716F58C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5620"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="8" w:tplc="AB242156">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="6340"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+  </w:abstractNum>
+  <w:abstractNum w:abstractNumId="6" w15:restartNumberingAfterBreak="0">
+    <w:nsid w:val="56F83543"/>
+    <w:multiLevelType w:val="hybridMultilevel"/>
+    <w:tmpl w:val="F87AFEBE"/>
+    <w:lvl w:ilvl="0" w:tplc="73A607B6">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="●"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="405"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="1" w:tplc="3A6839B0">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="1300"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="2" w:tplc="6DA8688A">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2020"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="3" w:tplc="DF2AD560">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2740"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="4" w:tplc="52564760">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="3460"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="5" w:tplc="B8C874EC">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4180"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="6" w:tplc="0122EB0C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4900"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="7" w:tplc="B93CAED0">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5620"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="8" w:tplc="0CD81A5C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="6340"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+  </w:abstractNum>
+  <w:abstractNum w:abstractNumId="7" w15:restartNumberingAfterBreak="0">
+    <w:nsid w:val="69CD30E6"/>
+    <w:multiLevelType w:val="hybridMultilevel"/>
+    <w:tmpl w:val="6344922A"/>
+    <w:lvl w:ilvl="0" w:tplc="027243E8">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="●"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="405"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="1" w:tplc="9D26593A">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="1300"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="2" w:tplc="61429A42">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2020"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="3" w:tplc="532E62C6">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2740"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="4" w:tplc="9F8C3460">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="3460"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="5" w:tplc="9CBE99CA">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4180"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="6" w:tplc="44BE9B08">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4900"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="7" w:tplc="1B8C1EBC">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5620"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="8" w:tplc="8C9CDCDA">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="6340"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+  </w:abstractNum>
+  <w:abstractNum w:abstractNumId="8" w15:restartNumberingAfterBreak="0">
+    <w:nsid w:val="75ED51D4"/>
+    <w:multiLevelType w:val="hybridMultilevel"/>
+    <w:tmpl w:val="F4BEE24C"/>
+    <w:lvl w:ilvl="0" w:tplc="1752FA1A">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="●"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="405"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="1" w:tplc="4B321254">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="1300"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="2" w:tplc="6C58CD8A">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2020"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="3" w:tplc="BE6CF0B4">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2740"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="4" w:tplc="DAB00B32">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="3460"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="5" w:tplc="00842214">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4180"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="6" w:tplc="D53CD63C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4900"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="7" w:tplc="480EA3D8">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5620"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="8" w:tplc="3B56B340">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="6340"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Calibri" w:eastAsia="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="11"/>
+        <w:szCs w:val="11"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+  </w:abstractNum>
+  <w:abstractNum w:abstractNumId="9" w15:restartNumberingAfterBreak="0">
+    <w:nsid w:val="7A2104CD"/>
+    <w:multiLevelType w:val="hybridMultilevel"/>
+    <w:tmpl w:val="D4C413E6"/>
+    <w:lvl w:ilvl="0" w:tplc="AD6A6D4C">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="345"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Arial" w:eastAsia="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="1" w:tplc="8B06FE7E">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="1440"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="2" w:tplc="CF684D14">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2160"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="3" w:tplc="89AAC716">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="2880"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Arial" w:eastAsia="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="4" w:tplc="3904C48E">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="3600"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="5" w:tplc="302C8430">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="4320"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="6" w:tplc="BF024732">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="•"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5040"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Arial" w:eastAsia="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="7" w:tplc="C63C69C2">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="o"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="5760"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+    <w:lvl w:ilvl="8" w:tplc="A1BA0494">
+      <w:start w:val="1"/>
+      <w:numFmt w:val="bullet"/>
+      <w:lvlText w:val="▪"/>
+      <w:lvlJc w:val="left"/>
+      <w:pPr>
+        <w:ind w:left="6480"/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI Symbol" w:eastAsia="Segoe UI Symbol" w:hAnsi="Segoe UI Symbol" w:cs="Segoe UI Symbol"/>
+        <w:b w:val="0"/>
+        <w:i w:val="0"/>
+        <w:strike w:val="0"/>
+        <w:dstrike w:val="0"/>
+        <w:color w:val="3C3E43"/>
+        <w:sz w:val="20"/>
+        <w:szCs w:val="20"/>
+        <w:u w:val="none" w:color="000000"/>
+        <w:bdr w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+        <w:vertAlign w:val="baseline"/>
+      </w:rPr>
+    </w:lvl>
+  </w:abstractNum>
+  <w:num w:numId="1" w16cid:durableId="1669016917">
+    <w:abstractNumId w:val="1"/>
+  </w:num>
+  <w:num w:numId="2" w16cid:durableId="1030686923">
+    <w:abstractNumId w:val="6"/>
+  </w:num>
+  <w:num w:numId="3" w16cid:durableId="826937421">
+    <w:abstractNumId w:val="9"/>
+  </w:num>
+  <w:num w:numId="4" w16cid:durableId="1636326674">
+    <w:abstractNumId w:val="0"/>
+  </w:num>
+  <w:num w:numId="5" w16cid:durableId="1489133099">
+    <w:abstractNumId w:val="4"/>
+  </w:num>
+  <w:num w:numId="6" w16cid:durableId="102966390">
+    <w:abstractNumId w:val="8"/>
+  </w:num>
+  <w:num w:numId="7" w16cid:durableId="1106580478">
+    <w:abstractNumId w:val="3"/>
+  </w:num>
+  <w:num w:numId="8" w16cid:durableId="754396127">
+    <w:abstractNumId w:val="2"/>
+  </w:num>
+  <w:num w:numId="9" w16cid:durableId="805004222">
+    <w:abstractNumId w:val="5"/>
+  </w:num>
+  <w:num w:numId="10" w16cid:durableId="434135258">
+    <w:abstractNumId w:val="7"/>
+  </w:num>
+</w:numbering>
