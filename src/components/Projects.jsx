@@ -8,6 +8,7 @@ import {
   FaComments, FaShoppingCart, FaCalendarAlt, FaRoute,
 } from 'react-icons/fa';
 import { projects } from '../data/sampleData';
+import { useNav } from '../context/NavigationContext';
 
 /* ─── 6 Featured project IDs (shown as cards by default) ─── */
 const FEATURED_IDS = [2, 3, 5, 6, 8, 10];
@@ -166,6 +167,7 @@ const gt = t => TECH[t] || { bg:'rgba(255,255,255,0.06)', color:'#94a3b8', bd:'r
 ════════════════════════════════════════════════════════════ */
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
+  const { navigate } = useNav();
 
   const featured  = projects.filter(p => FEATURED_IDS.includes(p.id));
   const remaining = projects.filter(p => !FEATURED_IDS.includes(p.id));
@@ -280,6 +282,7 @@ export default function Projects() {
                   project={project}
                   index={i}
                   reverse={i % 2 === 1}
+                  onViewDetails={() => navigate('project', project.id)}
                 />
               ))}
             </motion.div>
@@ -312,6 +315,7 @@ export default function Projects() {
 ════════════════════════════════════════════════════════════ */
 function ProjectCard({ project }) {
   const [hovered, setHovered] = useState(false);
+  const { navigate } = useNav();
   const allImgs = project.images || [project.image];
   const [idx, setIdx] = useState(0);
   const [dir, setDir] = useState(1);
@@ -424,14 +428,31 @@ function ProjectCard({ project }) {
               borderRadius:'50px', fontFamily:'var(--font-sans)' }}>{t}</span>;
           })}
         </div>
-        {hasStore && (
-          <div style={{ display:'flex', flexWrap:'wrap', gap:'7px',
-            paddingTop:'11px', borderTop:'1px solid var(--border-light)' }}>
+        <div style={{
+          paddingTop:'11px', borderTop:'1px solid var(--border-light)',
+          display:'flex', flexWrap:'wrap', gap:'7px', alignItems:'center',
+        }}>
+          {hasStore && <>
             {project.playstore && <SBtn href={project.playstore} icon={<FaGooglePlay size={10}/>} label="Play Store" g="linear-gradient(135deg,#16a34a,#22c55e)" s="rgba(22,163,74,0.35)"/>}
             {project.appstore  && <SBtn href={project.appstore}  icon={<FaApple size={11}/>}      label="App Store"  g="linear-gradient(135deg,#2563eb,#60a5fa)" s="rgba(37,99,235,0.35)"/>}
             {project.live      && <SBtn href={project.live}      icon={<FaExternalLinkAlt size={9}/>} label="Live"   g="linear-gradient(135deg,#d97706,#f59e0b)" s="rgba(217,119,6,0.35)"/>}
-          </div>
-        )}
+          </>}
+          <button
+            onClick={() => navigate('project', project.id)}
+            style={{
+              display:'inline-flex', alignItems:'center', gap:'5px',
+              background:'transparent', border:'1px solid var(--border-medium)',
+              color:'var(--text-secondary)', padding:'6px 14px', borderRadius:'50px',
+              cursor:'pointer', fontSize:'0.71rem', fontWeight:700,
+              fontFamily:'var(--font-sans)', transition:'all 0.2s',
+              marginLeft: hasStore ? 'auto' : '0',
+            }}
+            onMouseEnter={e=>{e.currentTarget.style.borderColor='#60a5fa';e.currentTarget.style.color='#60a5fa';}}
+            onMouseLeave={e=>{e.currentTarget.style.borderColor='';e.currentTarget.style.color='';}}
+          >
+            View Details <FaExternalLinkAlt size={9}/>
+          </button>
+        </div>
       </div>
     </motion.div>
   );
@@ -440,7 +461,7 @@ function ProjectCard({ project }) {
 /* ════════════════════════════════════════════════════════════
    PROJECT ROW (alternating split layout — like landing page)
 ════════════════════════════════════════════════════════════ */
-function ProjectRow({ project, index, reverse }) {
+function ProjectRow({ project, index, reverse, onViewDetails }) {
   const cfg      = IMG_CFG[project.id] || { fit:'cover', bg:'var(--bg-tertiary)' };
   const features = PROJECT_FEATURES[project.id] || [];
   const allImgs  = project.images || [project.image];
@@ -551,9 +572,21 @@ function ProjectRow({ project, index, reverse }) {
           })}
         </div>
 
-        {/* Store links */}
-        <div style={{ display:'flex', flexWrap:'wrap', gap:'10px' }}>
-          {project.github    && <SBtn href={project.github}    icon={<FaGithub size={12}/>}       label="Source"     g="linear-gradient(135deg,#374151,#6b7280)" s="rgba(55,65,81,0.35)"/>}
+        {/* Store links + View Details */}
+        <div style={{ display:'flex', flexWrap:'wrap', gap:'10px', alignItems:'center' }}>
+          <motion.button
+            whileHover={{ scale:1.04 }} whileTap={{ scale:0.97 }}
+            onClick={onViewDetails}
+            style={{
+              display:'inline-flex', alignItems:'center', gap:'7px',
+              background:'linear-gradient(135deg,#2563eb,#7c3aed)',
+              color:'#fff', fontSize:'0.78rem', fontWeight:700,
+              padding:'9px 20px', borderRadius:'50px', border:'none',
+              cursor:'pointer', fontFamily:'var(--font-sans)',
+              boxShadow:'0 4px 16px rgba(37,99,235,0.4)',
+            }}>
+            <FaExternalLinkAlt size={11}/> View Details
+          </motion.button>
           {project.playstore && <SBtn href={project.playstore} icon={<FaGooglePlay size={12}/>}   label="Play Store" g="linear-gradient(135deg,#16a34a,#22c55e)" s="rgba(22,163,74,0.35)"/>}
           {project.appstore  && <SBtn href={project.appstore}  icon={<FaApple size={13}/>}        label="App Store"  g="linear-gradient(135deg,#2563eb,#60a5fa)" s="rgba(37,99,235,0.35)"/>}
           {project.live      && <SBtn href={project.live}      icon={<FaExternalLinkAlt size={11}/>} label="Live"    g="linear-gradient(135deg,#d97706,#f59e0b)" s="rgba(217,119,6,0.35)"/>}

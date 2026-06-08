@@ -4,40 +4,85 @@ import IntroParagraph from './components/IntroParagraph';
 import TechStack from './components/TechStack';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
+import CaseStudies from './components/CaseStudies';
+import CaseStudyDetail from './components/CaseStudyDetail';
+import ProjectDetail from './components/ProjectDetail';
+import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+import { NavigationProvider, useNav } from './context/NavigationContext';
 import './App.css';
+
+/* ─── Section map: which component renders for each nav id ─ */
+const SECTION_MAP = {
+  'home':         () => <><Hero /><IntroParagraph /></>,
+  'about-us':     () => <Hero />,
+  'tech-stack':   () => <TechStack />,
+  'portfolio':    () => <Projects />,
+  'case-studies': () => <CaseStudies />,
+  'clients':      () => <Testimonials />,
+  'pricing':      () => <Pricing />,
+  'contact-us':   null,   // handled by Footer itself
+};
+
+function AppContent() {
+  const { page } = useNav();
+  const isHome       = page.type === 'home';
+  const isSection    = page.type === 'section';
+  const isCaseStudy  = page.type === 'case-study';
+  const isProject    = page.type === 'project';
+  const isContact    = isSection && page.id === 'contact-us';
+
+  return (
+    <>
+      <CustomCursor />
+      <Navbar />
+
+      {/* ── FULL LANDING PAGE ── */}
+      {isHome && (
+        <main id="home">
+          <Hero />
+          <IntroParagraph />
+          <TechStack />
+          <Projects />
+          <CaseStudies />
+          <Testimonials />
+          <Pricing />
+        </main>
+      )}
+
+      {/* ── SINGLE SECTION PAGE ── */}
+      {isSection && !isContact && (
+        <main style={{ paddingTop: '80px', minHeight: '80vh' }}>
+          {(SECTION_MAP[page.id] || (() => null))()}
+        </main>
+      )}
+
+      {/* ── CASE STUDY DETAIL ── */}
+      {isCaseStudy && (
+        <main>
+          <CaseStudyDetail id={page.id} />
+        </main>
+      )}
+
+      {/* ── PROJECT DETAIL ── */}
+      {isProject && (
+        <main>
+          <ProjectDetail id={page.id} />
+        </main>
+      )}
+
+      {/* Footer always visible (also acts as contact section) */}
+      <Footer />
+    </>
+  );
+}
 
 function App() {
   return (
-    <>
-      {/* Premium custom mouse follow pointer */}
-      <CustomCursor />
-
-      {/* Glassmorphic navigation header bar */}
-      <Navbar />
-
-      {/* Main Single Page Sections flow */}
-      <main id="home">
-        {/* Section 1: Hero & grayscale portrait & code block */}
-        <Hero />
-
-        {/* Section 2: Bold editorial intro statement banner */}
-        <IntroParagraph />
-
-        {/* Section 3: Tech Stack orbital rings layout */}
-        <TechStack />
-
-        {/* Section 4: Projects with dynamic filters & devices mockups */}
-        <Projects />
-
-        {/* Section 5: Dual column client testimonial review box */}
-        <Testimonials />
-      </main>
-
-      {/* Section 6: Let's build and deep charcoal footer block */}
-      <Footer />
-    </>
+    <NavigationProvider>
+      <AppContent />
+    </NavigationProvider>
   );
 }
 
