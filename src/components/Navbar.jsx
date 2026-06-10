@@ -5,12 +5,9 @@ import { useNav } from '../context/NavigationContext';
 
 const NAV_ITEMS = [
   { label: 'Home',         id: 'home'         },
-  { label: 'About Us',     id: 'about-us'     },
-  { label: 'Tech Stack',   id: 'tech-stack'   },
   { label: 'Portfolio',    id: 'portfolio'    },
   { label: 'Case Studies', id: 'case-studies' },
   { label: 'Clients',      id: 'clients'      },
-  { label: 'Pricing',      id: 'pricing'      },
   { label: 'Contact',      id: 'contact-us'   },
 ];
 
@@ -52,6 +49,10 @@ const Navbar = () => {
     ? 'home'
     : page.type === 'section'
     ? page.id
+    : page.type === 'case-study'
+    ? 'case-studies'
+    : page.type === 'project'
+    ? 'portfolio'
     : null;
 
   return (

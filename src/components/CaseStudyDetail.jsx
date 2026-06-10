@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaCheck } from 'react-icons/fa';
+import { FaArrowLeft, FaCheck, FaPaperPlane } from 'react-icons/fa';
 import { caseStudies } from '../data/caseStudies';
 import { useNav } from '../context/NavigationContext';
 
@@ -12,7 +13,17 @@ const fadeUp = (delay = 0) => ({
 
 export default function CaseStudyDetail({ id }) {
   const { goHome } = useNav();
+  const [isFlyingBack, setIsFlyingBack] = useState(false);
   const cs = caseStudies.find(c => c.id === id);
+  
+  const handleBack = () => {
+    setIsFlyingBack(true);
+    setTimeout(() => {
+      setIsFlyingBack(false);
+      goHome();
+    }, 400);
+  };
+
   if (!cs) return null;
   const isLife = cs.id === 1;
 
@@ -30,15 +41,24 @@ export default function CaseStudyDetail({ id }) {
           {/* Back */}
           <motion.button
             initial={{ opacity:0, x:-14 }} animate={{ opacity:1, x:0 }}
-            onClick={goHome}
+            whileHover={{ scale: 1.05, boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleBack}
             style={{
-              display:'inline-flex', alignItems:'center', gap:'8px',
-              background:'var(--bg-tertiary)', border:'1px solid var(--border-light)',
-              color:'var(--text-secondary)', padding:'8px 18px', borderRadius:'50px',
-              cursor:'pointer', fontSize:'0.82rem', fontWeight:600, marginBottom:'40px',
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid var(--border-light)',
+              color: 'var(--text-primary)', padding: '12px 24px', borderRadius: '50px',
+              cursor: 'pointer', fontFamily: 'var(--font-sans)',
+              fontSize: '0.9rem', fontWeight: 700, marginBottom: '40px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.05)'
             }}
           >
-            <FaArrowLeft size={11}/> Back to Portfolio
+            <motion.div animate={isFlyingBack ? { x: -30, y: -30, opacity: 0, scale: 0.5 } : { x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ duration: 0.4 }}>
+              {isFlyingBack ? <FaPaperPlane size={14} /> : <FaArrowLeft size={14} />}
+            </motion.div>
+            Back to Portfolio
           </motion.button>
 
           {/* Label + Title + Tagline */}
@@ -420,17 +440,21 @@ export default function CaseStudyDetail({ id }) {
           </div>
 
           <motion.button
-            whileHover={{ scale:1.04 }} whileTap={{ scale:0.97 }}
-            onClick={goHome}
+            whileHover={{ scale:1.05, boxShadow:'0 10px 25px rgba(37,99,235,0.4)' }}
+            whileTap={{ scale:0.95 }}
+            onClick={handleBack}
             style={{
-              display:'inline-flex', alignItems:'center', gap:'8px',
+              display:'inline-flex', alignItems:'center', gap:'10px',
               background:'linear-gradient(135deg,#2563eb,#7c3aed)',
-              color:'#fff', padding:'13px 30px', borderRadius:'50px',
+              color:'#fff', padding:'16px 36px', borderRadius:'50px',
               border:'none', cursor:'pointer',
-              fontSize:'0.88rem', fontWeight:700,
+              fontSize:'1rem', fontWeight:700, fontFamily:'var(--font-sans)',
               boxShadow:'0 8px 24px rgba(37,99,235,0.4)',
             }}>
-            <FaArrowLeft size={11}/> Back to Portfolio
+            <motion.div animate={isFlyingBack ? { x: -30, y: -30, opacity: 0, scale: 0.5 } : { x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ duration: 0.4 }}>
+              {isFlyingBack ? <FaPaperPlane size={14} /> : <FaArrowLeft size={14} />}
+            </motion.div>
+            Back to Portfolio
           </motion.button>
         </div>
       </section>

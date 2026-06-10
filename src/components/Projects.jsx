@@ -5,7 +5,7 @@ import {
   FaChevronLeft, FaChevronRight, FaChevronDown,
   FaCheckCircle, FaShieldAlt, FaMapMarkerAlt, FaMobileAlt,
   FaUsers, FaStar, FaLock, FaChartBar, FaBell, FaVideo,
-  FaComments, FaShoppingCart, FaCalendarAlt, FaRoute,
+  FaComments, FaShoppingCart, FaCalendarAlt, FaRoute, FaPaperPlane,
 } from 'react-icons/fa';
 import { projects } from '../data/sampleData';
 import { useNav } from '../context/NavigationContext';
@@ -166,8 +166,17 @@ const gt = t => TECH[t] || { bg:'rgba(255,255,255,0.06)', color:'#94a3b8', bd:'r
    MAIN SECTION
 ════════════════════════════════════════════════════════════ */
 export default function Projects() {
-  const [showAll, setShowAll] = useState(false);
-  const { navigate } = useNav();
+  const { page, navigate } = useNav();
+  const isStandalone = page?.type === 'section' && page?.id === 'portfolio';
+  const [showAll, setShowAll] = useState(isStandalone);
+  const [isFlying, setIsFlying] = useState(false);
+
+  useEffect(() => {
+    if (isStandalone) {
+      setShowAll(true);
+      window.scrollTo(0, 0);
+    }
+  }, [isStandalone]);
 
   const featured  = projects.filter(p => FEATURED_IDS.includes(p.id));
   const remaining = projects.filter(p => !FEATURED_IDS.includes(p.id));
@@ -187,36 +196,55 @@ export default function Projects() {
       <div style={{ maxWidth: '1260px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
 
         {/* ── Header ── */}
-        <motion.div initial={{ opacity:0, y:28 }} whileInView={{ opacity:1, y:0 }}
-          viewport={{ once:true }} transition={{ duration:0.6, ease:[0.22,1,0.36,1] }}
-          style={{ textAlign:'center', marginBottom:'58px' }}
-        >
-          <span style={{
-            display:'inline-flex', alignItems:'center', gap:'7px',
-            background:'rgba(37,99,235,0.1)', border:'1px solid rgba(37,99,235,0.2)',
-            borderRadius:'50px', padding:'5px 16px', marginBottom:'20px',
-          }}>
-            <span style={{ width:'6px', height:'6px', borderRadius:'50%',
-              background:'linear-gradient(135deg,#3b82f6,#8b5cf6)', display:'inline-block' }} />
-            <span style={{ fontSize:'0.7rem', fontWeight:800, letterSpacing:'0.14em',
-              color:'#60a5fa', textTransform:'uppercase', fontFamily:'var(--font-sans)' }}>
-              Portfolio
-            </span>
-          </span>
-
-          <h2 className="font-serif" style={{
-            fontSize:'clamp(2.4rem, 5vw, 3.8rem)', fontWeight:400,
-            color:'var(--text-primary)', lineHeight:1.1, marginBottom:'14px',
-          }}>
-            Projects I've Built
-          </h2>
-          <p style={{ color:'var(--text-secondary)', fontSize:'1rem',
-            fontFamily:'var(--font-sans)', maxWidth:'440px',
-            margin:'0 auto', lineHeight:1.7,
-          }}>
-            Real apps — shipped to production, used by real people worldwide.
-          </p>
-        </motion.div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '58px', flexWrap: 'wrap', gap: '20px' }}>
+          <motion.div initial={{ opacity:0, y:28 }} whileInView={{ opacity:1, y:0 }}
+            viewport={{ once:true }} transition={{ duration:0.6, ease:[0.22,1,0.36,1] }}
+            style={{ textAlign:'left' }}
+          >
+            <h2 className="font-serif" style={{
+              fontSize:'clamp(2.4rem, 5vw, 3.8rem)', fontWeight:400,
+              color:'var(--text-primary)', lineHeight:1.1, marginBottom:'14px',
+            }}>
+              Projects I've Built
+            </h2>
+            <p style={{ color:'var(--text-secondary)', fontSize:'1rem',
+              fontFamily:'var(--font-sans)', maxWidth:'440px', lineHeight:1.7,
+            }}>
+              Real apps — shipped to production, used by real people worldwide.
+            </p>
+          </motion.div>
+          <motion.button
+            onClick={() => {
+              setIsFlying(true);
+              setTimeout(() => {
+                setIsFlying(false);
+                if (page?.type === 'home') {
+                  navigate('section', 'portfolio');
+                } else {
+                  setShowAll(v => !v);
+                }
+              }, 400);
+            }}
+            whileHover={{ scale:1.05, boxShadow: '0 10px 25px rgba(37,99,235,0.4)' }}
+            whileTap={{ scale:0.95 }}
+            style={{
+              background:'linear-gradient(135deg,#2563eb,#7c3aed)',
+              color:'#fff', border:'none', padding:'14px 28px',
+              borderRadius:'14px', fontSize:'0.95rem', fontWeight:700,
+              cursor:'pointer', display:'flex', alignItems:'center', gap:'10px',
+              boxShadow:'0 4px 15px rgba(37,99,235,0.25)',
+              fontFamily:'var(--font-sans)',
+            }}
+          >
+            {showAll ? 'Show Less' : `Show All Projects (${projects.length})`}
+            <motion.div
+              animate={isFlying ? { x: 30, y: -30, opacity: 0, scale: 0.5 } : { x: 0, y: 0, opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+            >
+              <FaPaperPlane size={14} />
+            </motion.div>
+          </motion.button>
+        </div>
 
         {/* ── 6 Featured Cards Grid ── */}
         <motion.div
@@ -230,42 +258,6 @@ export default function Projects() {
         >
           {featured.map(p => <ProjectCard key={p.id} project={p} />)}
         </motion.div>
-
-        {/* ── Show More Button ── */}
-        <div style={{ textAlign:'center', marginBottom: showAll ? '70px' : '0' }}>
-          <motion.button
-            onClick={() => setShowAll(v => !v)}
-            whileHover={{ scale:1.04 }}
-            whileTap={{ scale:0.97 }}
-            style={{
-              position:'relative', cursor:'pointer', border:'none',
-              background:'linear-gradient(135deg,#2563eb,#7c3aed)',
-              color:'#fff', fontFamily:'var(--font-sans)',
-              fontSize:'1rem', fontWeight:700,
-              padding:'16px 44px', borderRadius:'50px',
-              boxShadow:'0 8px 32px rgba(37,99,235,0.45)',
-              letterSpacing:'0.02em',
-              display:'inline-flex', alignItems:'center', gap:'10px',
-            }}
-          >
-            {/* Pulsing ring */}
-            <motion.span
-              animate={{ scale:[1,1.6,1], opacity:[0.6,0,0.6] }}
-              transition={{ duration:2, repeat:Infinity, ease:'easeInOut' }}
-              style={{
-                position:'absolute', inset:0, borderRadius:'50px',
-                border:'2px solid rgba(99,179,237,0.6)', pointerEvents:'none',
-              }}
-            />
-            {showAll ? 'Show Less' : `Show All Projects (${projects.length})`}
-            <motion.span
-              animate={{ rotate: showAll ? 180 : 0 }}
-              transition={{ duration:0.3 }}
-            >
-              <FaChevronDown size={14} />
-            </motion.span>
-          </motion.button>
-        </div>
 
         {/* ── Alternating Split Layout — All Projects ── */}
         <AnimatePresence>
@@ -346,12 +338,17 @@ function ProjectCard({ project }) {
         transition:{duration:0.52,ease:[0.22,1,0.36,1]}} }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      animate={{ y: hovered?-7:0,
+      animate={{ 
+        y: hovered?-10:0,
+        rotateX: hovered ? 2 : 0,
+        rotateY: hovered ? -2 : 0,
         boxShadow: hovered
-          ? '0 20px 52px rgba(0,0,0,0.45), 0 0 0 1px rgba(96,165,250,0.18)'
-          : '0 4px 20px rgba(0,0,0,0.22)' }}
-      transition={{ type:'spring', stiffness:260, damping:22 }}
+          ? '0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(96,165,250,0.3)'
+          : '0 4px 20px rgba(0,0,0,0.22)' 
+      }}
+      transition={{ type:'spring', stiffness:300, damping:20 }}
       style={{
+        perspective: '1000px', transformStyle: 'preserve-3d',
         borderRadius:'18px',
         border:`1px solid ${hovered?'rgba(96,165,250,0.25)':'var(--border-light)'}`,
         background:'var(--card-bg)', overflow:'hidden',

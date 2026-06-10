@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   FaArrowLeft, FaGooglePlay, FaApple, FaExternalLinkAlt, FaGithub,
-  FaChevronLeft, FaChevronRight,
+  FaChevronLeft, FaChevronRight, FaPaperPlane,
   FaCheckCircle, FaShieldAlt, FaMapMarkerAlt, FaBell,
   FaUsers, FaStar, FaLock, FaChartBar, FaVideo,
   FaComments, FaShoppingCart, FaCalendarAlt, FaRoute, FaMobileAlt,
@@ -152,7 +152,17 @@ const gt = t => TECH_COLORS[t] || { bg:'rgba(255,255,255,0.06)', color:'#94a3b8'
 ════════════════════════════════════════════════════════════ */
 export default function ProjectDetail({ id }) {
   const { goHome } = useNav();
+  const [isFlyingBack, setIsFlyingBack] = useState(false);
   const project = projects.find(p => p.id === id);
+  
+  const handleBack = () => {
+    setIsFlyingBack(true);
+    setTimeout(() => {
+      setIsFlyingBack(false);
+      goHome();
+    }, 400);
+  };
+
   if (!project) return null;
 
   const allImgs  = project.images || [project.image];
@@ -180,16 +190,24 @@ export default function ProjectDetail({ id }) {
           {/* Back */}
           <motion.button
             initial={{ opacity:0, x:-20 }} animate={{ opacity:1, x:0 }}
-            onClick={goHome}
+            whileHover={{ scale: 1.05, boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleBack}
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
-              background: 'var(--bg-tertiary)', border: '1px solid var(--border-light)',
-              color: 'var(--text-secondary)', padding: '10px 18px', borderRadius: '50px',
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid var(--border-light)',
+              color: 'var(--text-primary)', padding: '12px 24px', borderRadius: '50px',
               cursor: 'pointer', fontFamily: 'var(--font-sans)',
-              fontSize: '0.85rem', fontWeight: 600, marginBottom: '40px',
+              fontSize: '0.9rem', fontWeight: 700, marginBottom: '40px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.05)'
             }}
           >
-            <FaArrowLeft size={12} /> Back to Portfolio
+            <motion.div animate={isFlyingBack ? { x: -30, y: -30, opacity: 0, scale: 0.5 } : { x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ duration: 0.4 }}>
+              {isFlyingBack ? <FaPaperPlane size={14} /> : <FaArrowLeft size={14} />}
+            </motion.div>
+            Back to Portfolio
           </motion.button>
 
           {/* Split layout */}
@@ -384,17 +402,21 @@ export default function ProjectDetail({ id }) {
       {/* ── Back button ── */}
       <div style={{ padding:'60px 20px', textAlign:'center', background:'var(--bg-primary)' }}>
         <motion.button
-          whileHover={{ scale:1.04 }} whileTap={{ scale:0.97 }}
-          onClick={goHome}
+          whileHover={{ scale:1.05, boxShadow:'0 10px 25px rgba(37,99,235,0.4)' }}
+          whileTap={{ scale:0.95 }}
+          onClick={handleBack}
           style={{
-            display:'inline-flex', alignItems:'center', gap:'8px',
+            display:'inline-flex', alignItems:'center', gap:'10px',
             background:'linear-gradient(135deg,#2563eb,#7c3aed)',
-            color:'#fff', padding:'14px 32px', borderRadius:'50px',
+            color:'#fff', padding:'16px 36px', borderRadius:'50px',
             border:'none', cursor:'pointer',
-            fontSize:'0.9rem', fontWeight:700, fontFamily:'var(--font-sans)',
+            fontSize:'1rem', fontWeight:700, fontFamily:'var(--font-sans)',
             boxShadow:'0 8px 28px rgba(37,99,235,0.4)',
           }}>
-          <FaArrowLeft size={12} /> Back to Portfolio
+          <motion.div animate={isFlyingBack ? { x: -30, y: -30, opacity: 0, scale: 0.5 } : { x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ duration: 0.4 }}>
+            {isFlyingBack ? <FaPaperPlane size={14} /> : <FaArrowLeft size={14} />}
+          </motion.div>
+          Back to Portfolio
         </motion.button>
       </div>
     </div>

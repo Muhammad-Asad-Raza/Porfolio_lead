@@ -125,6 +125,18 @@ export default function Pricing() {
                   gap: '20px',
                 }}
               >
+                {/* Animated VIP Glow */}
+                {isPopular && (
+                  <motion.div
+                    animate={{ opacity: [0.3, 0.7, 0.3], scale: [1, 1.02, 1] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    style={{
+                      position: 'absolute', inset: 0, borderRadius: '20px',
+                      boxShadow: 'inset 0 0 20px rgba(56,189,248,0.3)', pointerEvents: 'none'
+                    }}
+                  />
+                )}
+
                 {/* Popular badge */}
                 {isPopular && (
                   <div style={{

@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaPaperPlane } from 'react-icons/fa';
 import { caseStudies } from '../data/caseStudies';
 import { useNav } from '../context/NavigationContext';
 
@@ -42,24 +43,11 @@ export default function CaseStudies() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           style={{ textAlign: 'center', marginBottom: '64px' }}
         >
-          <span style={{
-            display: 'inline-flex', alignItems: 'center', gap: '7px',
-            background: 'rgba(124,58,237,0.1)', border: '1px solid rgba(124,58,237,0.2)',
-            borderRadius: '50px', padding: '5px 16px', marginBottom: '20px',
-          }}>
-            <span style={{ width: '6px', height: '6px', borderRadius: '50%',
-              background: 'linear-gradient(135deg,#8b5cf6,#ec4899)', display: 'inline-block' }} />
-            <span style={{ fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.14em',
-              color: '#a78bfa', textTransform: 'uppercase', fontFamily: 'var(--font-sans)' }}>
-              Case Studies
-            </span>
-          </span>
-
           <h2 className="font-serif" style={{
             fontSize: 'clamp(2.4rem, 5vw, 3.8rem)', fontWeight: 400,
             color: 'var(--text-primary)', lineHeight: 1.1, marginBottom: '14px',
           }}>
-            Deep-Dive Projects
+            Case Studies
           </h2>
           <p style={{
             color: 'var(--text-secondary)', fontSize: '1rem',
@@ -86,6 +74,16 @@ export default function CaseStudies() {
 }
 
 function CaseStudyCard({ cs, index, onOpen }) {
+  const [isFlying, setIsFlying] = useState(false);
+  const handleOpen = (e) => {
+    e.stopPropagation();
+    setIsFlying(true);
+    setTimeout(() => {
+      setIsFlying(false);
+      onOpen();
+    }, 400);
+  };
+
   return (
     <motion.div
       custom={index}
@@ -93,10 +91,11 @@ function CaseStudyCard({ cs, index, onOpen }) {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      whileHover={{ y: -6, boxShadow: '0 20px 52px rgba(0,0,0,0.3)' }}
-      transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-      onClick={onOpen}
+      whileHover={{ y: -10, rotateX: 2, rotateY: -2, boxShadow: '0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(124,58,237,0.3)' }}
+      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      onClick={handleOpen}
       style={{
+        perspective: '1000px', transformStyle: 'preserve-3d',
         borderRadius: '20px',
         border: '1px solid var(--border-light)',
         background: 'var(--card-bg)',
@@ -175,8 +174,8 @@ function CaseStudyCard({ cs, index, onOpen }) {
         </div>
 
         {/* CTA */}
-        <button
-          onClick={onOpen}
+        <motion.button
+          onClick={handleOpen}
           style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
             background: 'transparent', border: 'none', cursor: 'pointer',
@@ -185,8 +184,11 @@ function CaseStudyCard({ cs, index, onOpen }) {
             marginTop: '4px',
           }}
         >
-          Read Case Study <FaArrowRight size={12} />
-        </button>
+          Read Case Study 
+          <motion.div animate={isFlying ? { x: 30, y: -30, opacity: 0, scale: 0.5 } : { x: 0, y: 0, opacity: 1, scale: 1 }} transition={{ duration: 0.4 }}>
+            {isFlying ? <FaPaperPlane size={12} /> : <FaArrowRight size={12} />}
+          </motion.div>
+        </motion.button>
       </div>
     </motion.div>
   );

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
+import { motion, useInView, useMotionValue, useTransform, animate, useScroll } from 'framer-motion';
 import hamzaBhaiPic from '../assets/b5facb49860fbecc2e0c6ea8b49914505f2cfbec.png';
 
 const AnimatedNumber = ({ value }) => {
@@ -28,6 +28,10 @@ const AnimatedNumber = ({ value }) => {
 };
 
 const Hero = () => {
+  const { scrollY } = useScroll();
+  const yBg = useTransform(scrollY, [0, 1000], [0, 200]);
+  const yCode = useTransform(scrollY, [0, 1000], [0, -100]);
+
   // Looping Typewriter State for App Developer
   const [currentText, setCurrentText] = useState('');
   const [phraseIndex, setPhraseIndex] = useState(0);
@@ -99,8 +103,9 @@ const Hero = () => {
       }}
     >
       {/* Background soft lighting */}
-      <div 
+      <motion.div 
         style={{
+          y: yBg,
           position: 'absolute',
           top: '15%',
           left: '50%',
@@ -336,8 +341,9 @@ const Hero = () => {
       </div>
 
       {/* Express.js Frosted Glass Code Block - Exact Figma Layout: width 1234px, radius 20px, padding 32px 24px, fill #F0F0F0 at 30% */}
-      <div 
+      <motion.div 
         style={{
+          y: yCode,
           width: '100%',
           maxWidth: '1234px', // Exact Figma Width Spec
           position: 'relative',
@@ -445,7 +451,7 @@ const Hero = () => {
             </code>
           </pre>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Stats Section */}
       <motion.div 

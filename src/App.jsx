@@ -8,6 +8,7 @@ import CaseStudies from './components/CaseStudies';
 import CaseStudyDetail from './components/CaseStudyDetail';
 import ProjectDetail from './components/ProjectDetail';
 import Pricing from './components/Pricing';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import { NavigationProvider, useNav } from './context/NavigationContext';
@@ -22,7 +23,7 @@ const SECTION_MAP = {
   'case-studies': () => <CaseStudies />,
   'clients':      () => <Testimonials />,
   'pricing':      () => <Pricing />,
-  'contact-us':   null,   // handled by Footer itself
+  'contact-us':   () => <Contact />,
 };
 
 function AppContent() {
@@ -31,7 +32,6 @@ function AppContent() {
   const isSection    = page.type === 'section';
   const isCaseStudy  = page.type === 'case-study';
   const isProject    = page.type === 'project';
-  const isContact    = isSection && page.id === 'contact-us';
 
   return (
     <>
@@ -48,11 +48,12 @@ function AppContent() {
           <CaseStudies />
           <Testimonials />
           <Pricing />
+          <Contact />
         </main>
       )}
 
       {/* ── SINGLE SECTION PAGE ── */}
-      {isSection && !isContact && (
+      {isSection && (
         <main style={{ paddingTop: '80px', minHeight: '80vh' }}>
           {(SECTION_MAP[page.id] || (() => null))()}
         </main>

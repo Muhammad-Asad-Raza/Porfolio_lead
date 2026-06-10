@@ -23,62 +23,6 @@ const Footer = () => {
 
   return (
     <div id="contact-us" style={{ display: 'flex', flexDirection: 'column' }}>
-      {/* ── Call to Action (CTA) Section ── */}
-      <section 
-        style={{
-          padding: '120px 24px',
-          background: 'var(--bg-primary)',
-          textAlign: 'center',
-          borderTop: '1px solid var(--border-light)',
-          position: 'relative',
-          overflow: 'hidden'
-        }}
-      >
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 
-            style={{
-              fontSize: 'clamp(2.5rem, 5vw, 4.2rem)',
-              fontWeight: 300,
-              color: 'var(--text-primary)',
-              lineHeight: 1.1,
-              letterSpacing: '-0.02em',
-              marginBottom: '32px',
-              fontFamily: 'var(--font-sans)'
-            }}
-          >
-            Let's build{' '}
-            <span 
-              className="font-serif" 
-              style={{ fontStyle: 'italic', fontWeight: 600 }}
-            >
-              something
-            </span>{' '}
-            amazing together.
-          </h2>
-
-          <motion.button
-            whileHover={{ scale: 1.04, boxShadow: '0 15px 40px rgba(0,0,0,0.15)' }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => handleNavClick('contact-us')}
-            className="interactive"
-            style={{
-              background: '#1c1c1e',
-              color: '#ffffff',
-              border: 'none',
-              padding: '18px 48px',
-              borderRadius: '40px',
-              fontSize: '1.05rem',
-              fontWeight: '600',
-              cursor: 'pointer',
-              boxShadow: '0 8px 30px rgba(0,0,0,0.08)',
-              fontFamily: 'var(--font-sans)'
-            }}
-          >
-            Book a call
-          </motion.button>
-        </div>
-      </section>
-
       {/* ── Symmetrical Charcoal Footer Block ── */}
       <footer 
         style={{
@@ -110,13 +54,6 @@ const Footer = () => {
               Home
             </button>
             <button 
-              onClick={() => handleNavClick('about-us')} 
-              className="interactive footer-link"
-              style={{ background: 'none', border: 'none', color: 'var(--footer-muted)', textAlign: 'left', cursor: 'pointer', fontSize: '0.95rem' }}
-            >
-              About
-            </button>
-            <button 
               onClick={() => handleNavClick('portfolio')} 
               className="interactive footer-link"
               style={{ background: 'none', border: 'none', color: 'var(--footer-muted)', textAlign: 'left', cursor: 'pointer', fontSize: '0.95rem' }}
@@ -132,10 +69,9 @@ const Footer = () => {
             </button>
           </div>
 
-          {/* Column 2: Pricing, Terms directories */}
+          {/* Column 2: Legal directories */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <a href="#blogs" className="interactive footer-link" style={{ color: 'var(--footer-muted)', textDecoration: 'none', fontSize: '0.95rem' }}>Blogs</a>
-            <a href="#pricing" className="interactive footer-link" style={{ color: 'var(--footer-muted)', textDecoration: 'none', fontSize: '0.95rem' }}>Pricing</a>
             <a href="#terms" className="interactive footer-link" style={{ color: 'var(--footer-muted)', textDecoration: 'none', fontSize: '0.95rem' }}>Terms</a>
             <a href="#privacy" className="interactive footer-link" style={{ color: 'var(--footer-muted)', textDecoration: 'none', fontSize: '0.95rem' }}>Privacy</a>
           </div>

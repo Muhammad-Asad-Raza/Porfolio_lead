@@ -73,13 +73,13 @@ const Testimonials = () => {
           }}
           className="testimonials-grid"
         >
-          {reviews.map((review) => (
+          {reviews.map((review, i) => (
             <motion.div
               key={review.id}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -269,6 +269,7 @@ const Testimonials = () => {
                   key={index}
                   onClick={() => setOpenFAQ(isOpen ? -1 : index)}
                   className="interactive"
+                  whileHover={{ scale: 1.01, boxShadow: '0 10px 30px rgba(124,58,237,0.1)' }}
                   style={{
                     background: isOpen ? '#111111' : 'var(--bg-primary)',
                     border: isOpen ? '1px solid #111111' : '1px solid var(--border-medium)',
@@ -277,7 +278,7 @@ const Testimonials = () => {
                     cursor: 'pointer',
                     transition: 'all 0.3s ease',
                     color: isOpen ? '#ffffff' : 'var(--text-primary)',
-                    boxShadow: isOpen ? '0 10px 25px rgba(0,0,0,0.1)' : 'none'
+                    boxShadow: isOpen ? '0 10px 25px rgba(0,0,0,0.1), 0 0 20px rgba(124,58,237,0.2)' : 'none'
                   }}
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

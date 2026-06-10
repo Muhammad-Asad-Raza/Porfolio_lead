@@ -44,7 +44,7 @@ const IntroParagraph = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: false, amount: 0.15 }}
         >
           {/* Header */}
           <motion.div variants={itemVariants} style={{ marginBottom: '60px' }}>
@@ -83,24 +83,28 @@ const IntroParagraph = () => {
             {/* Left Image (`Project_MBL.png`) */}
             <motion.div 
               variants={itemVariants}
-              whileHover={{ scale: 1.02, rotate: -1 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               style={{
                 flex: '1 1 400px',
                 maxWidth: '600px',
                 cursor: 'pointer'
               }}
             >
-              <img 
-                src={projectMblImage} 
-                alt="App Interface Mockup" 
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 20px 40px rgba(133, 0, 214, 0.15))'
-                }}
-              />
+              <motion.div
+                animate={{ y: [0, -15, 0], rotate: [0, 1, -1, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.03, rotate: 0 }}
+              >
+                <img 
+                  src={projectMblImage} 
+                  alt="App Interface Mockup" 
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'contain',
+                    filter: 'drop-shadow(0 20px 40px rgba(133, 0, 214, 0.15))'
+                  }}
+                />
+              </motion.div>
             </motion.div>
 
             {/* Right Text Content */}
