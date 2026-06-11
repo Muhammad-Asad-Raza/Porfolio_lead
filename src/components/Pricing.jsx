@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaCheck, FaStar } from 'react-icons/fa';
 import { services } from '../data/sampleData';
+import { useNav } from '../context/NavigationContext';
 
 const POPULAR_ID = 2; // Website Development
 
@@ -13,6 +14,8 @@ const cardV = {
 };
 
 export default function Pricing() {
+  const { navigate } = useNav();
+
   return (
     <section
       id="pricing"
@@ -93,7 +96,7 @@ export default function Pricing() {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
           gap: '24px',
-          alignItems: 'start',
+          alignItems: 'stretch',
         }}>
           {services.map((service, i) => {
             const isPopular = service.id === POPULAR_ID;
@@ -105,9 +108,15 @@ export default function Pricing() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                whileHover={{ y: -6 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+                whileHover={{ 
+                  y: -10, scale: 1.02, rotateX: 2, rotateY: -2,
+                  boxShadow: isPopular 
+                    ? '0 30px 60px rgba(37,99,235,0.4), 0 0 0 1px rgba(56,189,248,0.4)'
+                    : '0 20px 40px rgba(0,0,0,0.15), 0 0 0 1px rgba(96,165,250,0.3)'
+                }}
+                transition={{ type: 'spring', stiffness: 400, damping: 25 }}
                 style={{
+                  perspective: '1000px',
                   position: 'relative',
                   borderRadius: '20px',
                   padding: isPopular ? '32px 28px' : '28px 24px',
@@ -235,12 +244,12 @@ export default function Pricing() {
                 </ul>
 
                 {/* CTA Button */}
-                <a
-                  href="mailto:hamzashafiqueofficial@gmail.com"
+                <button
+                  onClick={() => navigate('section', 'contact-us')}
                   style={{
-                    display: 'block', textAlign: 'center',
+                    display: 'block', width: '100%', textAlign: 'center',
                     padding: '13px 24px', borderRadius: '12px',
-                    textDecoration: 'none',
+                    textDecoration: 'none', cursor: 'pointer',
                     fontSize: '0.9rem', fontWeight: 700,
                     fontFamily: 'var(--font-sans)',
                     background: isPopular
@@ -269,7 +278,7 @@ export default function Pricing() {
                   }}
                 >
                   Get Started
-                </a>
+                </button>
               </motion.div>
             );
           })}

@@ -213,51 +213,55 @@ export default function Projects() {
               Real apps — shipped to production, used by real people worldwide.
             </p>
           </motion.div>
-          <motion.button
-            onClick={() => {
-              setIsFlying(true);
-              setTimeout(() => {
-                setIsFlying(false);
-                if (page?.type === 'home') {
-                  navigate('section', 'portfolio');
-                } else {
-                  setShowAll(v => !v);
-                }
-              }, 400);
-            }}
-            whileHover={{ scale:1.05, boxShadow: '0 10px 25px rgba(37,99,235,0.4)' }}
-            whileTap={{ scale:0.95 }}
-            style={{
-              background:'linear-gradient(135deg,#2563eb,#7c3aed)',
-              color:'#fff', border:'none', padding:'14px 28px',
-              borderRadius:'14px', fontSize:'0.95rem', fontWeight:700,
-              cursor:'pointer', display:'flex', alignItems:'center', gap:'10px',
-              boxShadow:'0 4px 15px rgba(37,99,235,0.25)',
-              fontFamily:'var(--font-sans)',
-            }}
-          >
-            {showAll ? 'Show Less' : `Show All Projects (${projects.length})`}
-            <motion.div
-              animate={isFlying ? { x: 30, y: -30, opacity: 0, scale: 0.5 } : { x: 0, y: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4 }}
+          {!isStandalone && (
+            <motion.button
+              onClick={() => {
+                setIsFlying(true);
+                setTimeout(() => {
+                  setIsFlying(false);
+                  if (page?.type === 'home') {
+                    navigate('section', 'portfolio');
+                  } else {
+                    setShowAll(v => !v);
+                  }
+                }, 400);
+              }}
+              whileHover={{ scale:1.05, boxShadow: '0 10px 25px rgba(37,99,235,0.4)' }}
+              whileTap={{ scale:0.95 }}
+              style={{
+                background:'linear-gradient(135deg,#2563eb,#7c3aed)',
+                color:'#fff', border:'none', padding:'14px 28px',
+                borderRadius:'14px', fontSize:'0.95rem', fontWeight:700,
+                cursor:'pointer', display:'flex', alignItems:'center', gap:'10px',
+                boxShadow:'0 4px 15px rgba(37,99,235,0.25)',
+                fontFamily:'var(--font-sans)',
+              }}
             >
-              <FaPaperPlane size={14} />
-            </motion.div>
-          </motion.button>
+              {showAll ? 'Show Less' : `Show All Projects (${projects.length})`}
+              <motion.div
+                animate={isFlying ? { x: 30, y: -30, opacity: 0, scale: 0.5 } : { x: 0, y: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4 }}
+              >
+                <FaPaperPlane size={14} />
+              </motion.div>
+            </motion.button>
+          )}
         </div>
 
         {/* ── 6 Featured Cards Grid ── */}
-        <motion.div
-          initial="hidden" whileInView="show" viewport={{ once:true, margin:'-40px' }}
-          variants={{ hidden:{}, show:{ transition:{ staggerChildren:0.07 } } }}
-          style={{
-            display:'grid',
-            gridTemplateColumns:'repeat(auto-fill, minmax(340px, 1fr))',
-            gap:'22px', marginBottom:'56px',
-          }}
-        >
-          {featured.map(p => <ProjectCard key={p.id} project={p} />)}
-        </motion.div>
+        {!isStandalone && (
+          <motion.div
+            initial="hidden" whileInView="show" viewport={{ once:true, margin:'-40px' }}
+            variants={{ hidden:{}, show:{ transition:{ staggerChildren:0.07 } } }}
+            style={{
+              display:'grid',
+              gridTemplateColumns:'repeat(auto-fill, minmax(340px, 1fr))',
+              gap:'22px', marginBottom:'56px',
+            }}
+          >
+            {featured.map(p => <ProjectCard key={p.id} project={p} />)}
+          </motion.div>
+        )}
 
         {/* ── Alternating Split Layout — All Projects ── */}
         <AnimatePresence>
@@ -268,7 +272,7 @@ export default function Projects() {
               exit={{ opacity:0 }}
               transition={{ duration:0.4 }}
             >
-              {remaining.map((project, i) => (
+              {(isStandalone ? projects : remaining).map((project, i) => (
                 <ProjectRow
                   key={project.id}
                   project={project}
